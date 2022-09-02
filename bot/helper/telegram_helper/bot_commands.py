@@ -44,7 +44,7 @@ class _BotCommands:
         self.PingCommand = f'ping{CMD_INDEX}'
         self.RestartCommand = f'restart{CMD_INDEX}'
         self.StatsCommand = f'stats{CMD_INDEX}'
-        self.HelpCommand = f'help{CMD_INDEX}'
+        self.HelpCommand = f'help2{CMD_INDEX}'
         self.LogCommand = f'log{CMD_INDEX}'
         self.ShellCommand = f'shell{CMD_INDEX}'
         self.EvalCommand = f'eval{CMD_INDEX}'
