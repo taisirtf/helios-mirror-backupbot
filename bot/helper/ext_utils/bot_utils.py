@@ -144,10 +144,14 @@ def get_readable_message():
                     msg += f"\n<b>├🕑 Elapsed: </b>{get_readable_time(time() - download.message.date.timestamp())}"
                     msg += f"\n<b>├⚙️ Engine :</b> {download.eng()}"
                     msg += f"\n<b>├⚠️ Warn: </b> <code>/warn {download.message.from_user.id}</code>"
-                    try:
-                        msg += f"\n<b>Seeders:</b> {download.seeders_num()} | <b>Leechers:</b> {download.leechers_num()}"
-                    except:
-                        pass
+                    if hasattr(download, 'seeders_num'):
+                       try:
+                           if EMOJI_THEME is True:
+                              msg += f"\n<b>├🌱 Seeders:</b> {download.seeders_num()}"
+                              msg += f"\n<b>├🐌 Leechers:</b> {download.leechers_num()}"
+                              msg += f"\n<b>├👤Source :</b> ️<code>{download.message.from_user.first_name}</code>"
+                       except:
+                              pass
 
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 if EMOJI_THEME is True:
@@ -164,11 +168,11 @@ def get_readable_message():
                 msg += f"\n<b>Size: </b>{download.size()}"
             if download.message.chat.type != 'private':
                 uname =download.message.from_user.first_name
-                msg += f'\n<b>├👤 Source: </b><a href="https://t.me/c/{uname}/{download.message.message_id}">{download.message.from_user.first_name}</a> | <b>Id :</b> <code>{download.message.from_user.id}</code>'
+                msg += f'\n<b>├🧿 Source ID: </b> <code>{download.message.from_user.id}</code>'
             else:
                 msg += ''
             msg += f"\n<b>╰❎ Cancel: </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
-            msg += f"\n<b>_____________________________</b>"
+            msg += f"\n<b>[~~☢️MOVIEHUBBD☢️~~]</b>"
             msg += "\n\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
