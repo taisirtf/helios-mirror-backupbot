@@ -148,8 +148,8 @@ def get_readable_message():
                        try:
                            if EMOJI_THEME is True:
                               msg += f"\n<b>├🌱 Seeders:</b> {download.seeders_num()}"
-                              msg += f"\n<b>├🐌 Leechers:</b> {download.leechers_num()}"
-                              msg += f"\n<b>├👤Source :</b> ️<code>{download.message.from_user.first_name}</code>"
+                              msg += f"\n<b>├🧲 Leechers:</b> {download.leechers_num()}"
+                              
                        except:
                               pass
 
@@ -169,7 +169,7 @@ def get_readable_message():
             if download.message.chat.type != 'private':
                 uname =download.message.from_user.first_name
                 msg += f"\n<b>├👤Source :</b> ️<code>{download.message.from_user.first_name}</code>"
-                msg += f'\n<b>├🧿 Source ID: </b> <code>{download.message.from_user.id}</code>'
+                msg += f'\n<b>├🆔 Source ID: </b> <code>{download.message.from_user.id}</code>'
             else:
                 msg += ''
             msg += f"\n<b>╰❎ Cancel: </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
