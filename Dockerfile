@@ -6,7 +6,7 @@ RUN chmod 777 /usr/src/app
 
 RUN apt-get -y update && DEBIAN_FRONTEND="noninteractive" \
     apt-get install -y apt-utils && DEBIAN_FRONTEND="noninteractive" \
-    apt-get install -y python3 python3-pip libglib2.0 libnss3 libgconf-2-4 libfontconfig1 wget \
+    apt-get install -y python3 firefox python3-pip libglib2.0 libnss3 libgconf-2-4 libfontconfig1 wget \
     tzdata p7zip-full p7zip-rar xz-utils curl pv jq ffmpeg \
     locales git unzip rtmpdump libmagic-dev libcurl4-openssl-dev \
     libssl-dev libc-ares-dev libsodium-dev libcrypto++-dev \
