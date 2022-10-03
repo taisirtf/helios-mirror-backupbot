@@ -143,6 +143,8 @@ def get_readable_message():
                     msg += f"\n<b>├⏰ ETA:</b> {download.eta()}"
                     msg += f"\n<b>├🕑 Elapsed: </b>{get_readable_time(time() - download.message.date.timestamp())}"
                     msg += f"\n<b>├⚙️ Engine :</b> {download.eng()}"
+                    msg += f"\n<b>├👤Source :</b> ️<code>{download.message.from_user.first_name}</code>"
+                    msg += f'\n<b>├🆔 Source ID: </b> <code>{download.message.from_user.id}</code>'
                     msg += f"\n<b>├⚠️ Warn: </b> <code>/warn {download.message.from_user.id}</code>"
                     if hasattr(download, 'seeders_num'):
                        try:
@@ -168,8 +170,7 @@ def get_readable_message():
                 msg += f"\n<b>Size: </b>{download.size()}"
             if download.message.chat.type != 'private':
                 uname =download.message.from_user.first_name
-                msg += f"\n<b>├👤Source :</b> ️<code>{download.message.from_user.first_name}</code>"
-                msg += f'\n<b>├🆔 Source ID: </b> <code>{download.message.from_user.id}</code>'
+                
             else:
                 msg += ''
             msg += f"\n<b>╰❎ Cancel: </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
