@@ -47,6 +47,7 @@ class _BotCommands:
         self.HelpCommand = f'help{CMD_INDEX}'
         self.LogCommand = f'log{CMD_INDEX}'
         self.ShellCommand = f'shell{CMD_INDEX}'
+        self.SleepCommand = f'sleep{CMD_INDEX}'
         self.EvalCommand = f'eval{CMD_INDEX}'
         self.ExecCommand = f'exec{CMD_INDEX}'
         self.ClearLocalsCommand = f'clearlocals{CMD_INDEX}'
