@@ -28,7 +28,7 @@ class _BotCommands:
         self.QbZipLeechCommand = getCommand('QBUNZIPLEECH_CMD', f'qbzipleech0{CMD_INDEX}')
         self.YtdlLeechCommand =getCommand('YTDLLEECH_CMD',  f'ytdlleech{CMD_INDEX}')
         self.YtdlZipLeechCommand = getCommand('YTDLZIPLEECH_CMD', f'ytdlzipleech{CMD_INDEX}')
-        self.CloneCommand = getCommand('CLONE_CMD', f'clone0{CMD_INDEX}')
+        self.CloneCommand = getCommand('CLONE_CMD', f'clone0{CMD_INDEX}', f'c0{CMD_INDEX}')
         self.CountCommand = getCommand('COUNT_CMD', f'count{CMD_INDEX}')
         self.DeleteCommand = getCommand('DELETE_CMD', f'del{CMD_INDEX}')
         self.CancelMirror = getCommand('CANCEL_CMD', f'cancel{CMD_INDEX}')
@@ -41,8 +41,8 @@ class _BotCommands:
         self.UnAuthorizeCommand = f'unauthorize{CMD_INDEX}'
         self.AddSudoCommand = f'addsudo{CMD_INDEX}'
         self.RmSudoCommand = f'rmsudo{CMD_INDEX}'
-        self.PingCommand = f'ping{CMD_INDEX}'
-        self.RestartCommand = f'restart{CMD_INDEX}'
+        self.PingCommand = f'p{CMD_INDEX}'
+        self.RestartCommand = f'r{CMD_INDEX}'
         self.StatsCommand = f'stats{CMD_INDEX}'
         self.HelpCommand = f'help{CMD_INDEX}'
         self.LogCommand = f'log{CMD_INDEX}'
