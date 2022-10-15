@@ -28,7 +28,7 @@ class _BotCommands:
         self.QbZipLeechCommand = getCommand('QBUNZIPLEECH_CMD', f'qbzipleech0{CMD_INDEX}')
         self.YtdlLeechCommand =getCommand('YTDLLEECH_CMD',  f'ytdlleech{CMD_INDEX}')
         self.YtdlZipLeechCommand = getCommand('YTDLZIPLEECH_CMD', f'ytdlzipleech{CMD_INDEX}')
-        self.CloneCommand = getCommand('CLONE_CMD', f'clone0{CMD_INDEX}', f'c0{CMD_INDEX}')
+        self.CloneCommand = getCommand('CLONE_CMD', f'clone{CMD_INDEX}')
         self.CountCommand = getCommand('COUNT_CMD', f'count{CMD_INDEX}')
         self.DeleteCommand = getCommand('DELETE_CMD', f'del{CMD_INDEX}')
         self.CancelMirror = getCommand('CANCEL_CMD', f'cancel{CMD_INDEX}')
